@@ -1,0 +1,29 @@
+/*******************************************************************************
+ * Copyright (c) 2016 Jens Reimann.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Jens Reimann - initial API and implementation
+ *******************************************************************************/
+package de.dentrassi.eclipse.provider.eclipse;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ProjectsInformation
+{
+    private Map<String, Project> projects = new HashMap<> ();
+
+    public void setProjects ( final Map<String, Project> projects )
+    {
+        this.projects = projects;
+    }
+
+    public Map<String, Project> getProjects ()
+    {
+        return this.projects;
+    }
+}

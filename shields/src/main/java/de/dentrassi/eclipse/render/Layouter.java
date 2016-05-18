@@ -148,9 +148,13 @@ public class Layouter
 
     private static Font loadFont ( final float fontSize )
     {
-
         try ( InputStream in = Layouter.class.getClassLoader ().getResourceAsStream ( "/WEB-INF/font/OpenSans-Semibold.ttf" ) )
         {
+            if ( in == null )
+            {
+                throw new RuntimeException ( "Failed to find font data" );
+            }
+
             final Map<TextAttribute, Object> attrs = new HashMap<> ();
             attrs.put ( TextAttribute.SIZE, fontSize );
             attrs.put ( TextAttribute.WEIGHT, TextAttribute.WEIGHT_SEMIBOLD );

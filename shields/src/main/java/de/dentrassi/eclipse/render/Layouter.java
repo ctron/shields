@@ -148,7 +148,7 @@ public class Layouter
 
     private static Font loadFont ( final float fontSize )
     {
-        try ( InputStream in = Layouter.class.getClassLoader ().getResourceAsStream ( "/WEB-INF/font/OpenSans-Semibold.ttf" ) )
+        try ( InputStream in = Layouter.class.getClassLoader ().getResourceAsStream ( "/font/OpenSans-Semibold.ttf" ) )
         {
             if ( in == null )
             {

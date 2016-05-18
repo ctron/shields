@@ -148,7 +148,8 @@ public class Layouter
 
     private static Font loadFont ( final float fontSize )
     {
-        try ( InputStream in = Layouter.class.getClassLoader ().getResourceAsStream ( "META-INF/font/OpenSans-Semibold.ttf" ) )
+
+        try ( InputStream in = Layouter.class.getClassLoader ().getResourceAsStream ( "/WEB-INF/font/OpenSans-Semibold.ttf" ) )
         {
             final Map<TextAttribute, Object> attrs = new HashMap<> ();
             attrs.put ( TextAttribute.SIZE, fontSize );

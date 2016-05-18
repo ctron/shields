@@ -81,7 +81,12 @@ public class ProjectProvider implements Provider
 
         if ( !result.isSuccessful () )
         {
-            return null;
+            if ( result.code () == 404 )
+            {
+                return null;
+            }
+
+            throw new ShieldRequestException ( result.message (), result.code () );
         }
 
         final GsonBuilder gb = new GsonBuilder ();
